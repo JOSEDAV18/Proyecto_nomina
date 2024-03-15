@@ -48,18 +48,18 @@ function ingresarEmpleado() {
         return;
     }
 
-    extranjero = readlineSync.keyInYNStrict('¿Es extranjero? (Y/N): ');
+    extranjero = readlineSync.keyInYNStrict('¿Es extranjero? ingrese "Y" para si o "N" para no: ');
     if (extranjero) { // Si el empleado es extranjero, pedir el valor de los vuelos
         vuelo1 = +readlineSync.question('Ingrese el valor del primer vuelo: ');
         vuelo2 = +readlineSync.question('Ingrese el valor del segundo vuelo: ');
         contadorExtranjeros++;
     }
 
-    zRural = readlineSync.keyInYNStrict('¿Vive en zona rural? (Y/N): ');
+    zRural = readlineSync.keyInYNStrict('¿Vive en zona rural? ingrese "Y" para si o "N" para no: ');
 
     const estrato = +readlineSync.question('Ingrese el estrato del empleado: ');
 
-    const tieneHijos = readlineSync.keyInYNStrict('¿Tiene hijos? (Y/N): ');
+    const tieneHijos = readlineSync.keyInYNStrict('¿Tiene hijos? ingrese "Y" para si o "N" para no: ');
     let totalSubsidiosHijos = 0; // Variable para almacenar el total de subsidios para hijos
     if (tieneHijos) {
         const cantidadHijos = +readlineSync.question('Ingrese la cantidad de hijos: ');
